@@ -1,0 +1,596 @@
+{
+  "standardId": "EN301549_v3.2.1",
+  "wcagVersion": "2.1",
+  "criteria": {
+    "1.1.1": {
+      "title": "Non-text content",
+      "level": "A",
+      "principle": "Perceivable",
+      "enClause": "9.1.1.1",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "WH",
+        "LH",
+        "LC"
+      ]
+    },
+    "1.2.1": {
+      "title": "Audio-only and video-only (pre-recorded)",
+      "level": "A",
+      "principle": "Perceivable",
+      "enClause": "9.1.2.1",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "WH",
+        "LH",
+        "LC"
+      ]
+    },
+    "1.2.2": {
+      "title": "Captions (pre-recorded)",
+      "level": "A",
+      "principle": "Perceivable",
+      "enClause": "9.1.2.2",
+      "userNeeds": [
+        "WH",
+        "LH",
+        "LC"
+      ]
+    },
+    "1.2.3": {
+      "title": "Audio description or media alternative (pre-recorded)",
+      "level": "A",
+      "principle": "Perceivable",
+      "enClause": "9.1.2.3",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LC"
+      ]
+    },
+    "1.2.4": {
+      "title": "Captions (Live)",
+      "level": "AA",
+      "principle": "Perceivable",
+      "enClause": "9.1.2.4",
+      "userNeeds": [
+        "WH",
+        "LH",
+        "LC"
+      ]
+    },
+    "1.2.5": {
+      "title": "Audio description\n(pre-recorded)",
+      "level": "AA",
+      "principle": "Perceivable",
+      "enClause": "9.1.2.5",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LC"
+      ]
+    },
+    "1.3.1": {
+      "title": "Info and relationships",
+      "level": "A",
+      "principle": "Perceivable",
+      "enClause": "9.1.3.1",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LC"
+      ]
+    },
+    "1.3.2": {
+      "title": "Meaningful sequence",
+      "level": "A",
+      "principle": "Perceivable",
+      "enClause": "9.1.3.2",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LC"
+      ]
+    },
+    "1.3.3": {
+      "title": "Sensory characteristics",
+      "level": "A",
+      "principle": "Perceivable",
+      "enClause": "9.1.3.3",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "WPC",
+        "WH",
+        "LH",
+        "LC"
+      ]
+    },
+    "1.3.4": {
+      "title": "Orientation",
+      "level": "AA",
+      "principle": "Perceivable",
+      "enClause": "9.1.3.4",
+      "userNeeds": [
+        "LMS",
+        "LR",
+        "LC"
+      ]
+    },
+    "1.3.5": {
+      "title": "Identify input purpose",
+      "level": "AA",
+      "principle": "Perceivable",
+      "enClause": "9.1.3.5",
+      "userNeeds": [
+        "LV"
+      ]
+    },
+    "1.4.1": {
+      "title": "Use of colour",
+      "level": "A",
+      "principle": "Perceivable",
+      "enClause": "9.1.4.1",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "WPC",
+        "LC"
+      ]
+    },
+    "1.4.2": {
+      "title": "Audio control",
+      "level": "A",
+      "principle": "Perceivable",
+      "enClause": "9.1.4.2",
+      "userNeeds": [
+        "WV",
+        "LH",
+        "LC"
+      ]
+    },
+    "1.4.3": {
+      "title": "Contrast (minimum)",
+      "level": "AA",
+      "principle": "Perceivable",
+      "enClause": "9.1.4.3",
+      "userNeeds": [
+        "LV",
+        "WPC",
+        "LC"
+      ]
+    },
+    "1.4.4": {
+      "title": "Resize text",
+      "level": "AA",
+      "principle": "Perceivable",
+      "enClause": "9.1.4.4",
+      "userNeeds": [
+        "LV"
+      ]
+    },
+    "1.4.5": {
+      "title": "Images of text",
+      "level": "AA",
+      "principle": "Perceivable",
+      "enClause": "9.1.4.5",
+      "userNeeds": [
+        "LV",
+        "WPC",
+        "LC"
+      ]
+    },
+    "1.4.10": {
+      "title": "Reflow",
+      "level": "AA",
+      "principle": "Perceivable",
+      "enClause": "9.1.4.10",
+      "userNeeds": [
+        "LV"
+      ]
+    },
+    "1.4.11": {
+      "title": "Non-text contrast",
+      "level": "AA",
+      "principle": "Perceivable",
+      "enClause": "9.1.4.11",
+      "userNeeds": [
+        "LV",
+        "WPC",
+        "LC"
+      ]
+    },
+    "1.4.12": {
+      "title": "Text spacing",
+      "level": "AA",
+      "principle": "Perceivable",
+      "enClause": "9.1.4.12",
+      "userNeeds": [
+        "LV",
+        "LC"
+      ]
+    },
+    "1.4.13": {
+      "title": "Content on hover or focus",
+      "level": "AA",
+      "principle": "Perceivable",
+      "enClause": "9.1.4.13",
+      "userNeeds": [
+        "LV",
+        "LC"
+      ]
+    },
+    "2.1.1": {
+      "title": "Keyboard",
+      "level": "A",
+      "principle": "Operable",
+      "enClause": "9.2.1.1",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LMS",
+        "WVC"
+      ]
+    },
+    "2.1.2": {
+      "title": "No keyboard trap",
+      "level": "A",
+      "principle": "Operable",
+      "enClause": "9.2.1.2",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LR",
+        "LMS"
+      ]
+    },
+    "2.1.4": {
+      "title": "Character key shortcuts",
+      "level": "A",
+      "principle": "Operable",
+      "enClause": "9.2.1.4",
+      "userNeeds": [
+        "LMS",
+        "LR",
+        "LC"
+      ]
+    },
+    "2.2.1": {
+      "title": "Timing adjustable",
+      "level": "A",
+      "principle": "Operable",
+      "enClause": "9.2.2.1",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "WH",
+        "LH",
+        "LMS",
+        "LC"
+      ]
+    },
+    "2.2.2": {
+      "title": "Pause, stop, hide",
+      "level": "A",
+      "principle": "Operable",
+      "enClause": "9.2.2.2",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "WH",
+        "LH",
+        "LMS",
+        "LC"
+      ]
+    },
+    "2.3.1": {
+      "title": "Three flashes or below threshold",
+      "level": "A",
+      "principle": "Operable",
+      "enClause": "9.2.3.1",
+      "userNeeds": [
+        "PST"
+      ]
+    },
+    "2.4.1": {
+      "title": "Bypass blocks",
+      "level": "A",
+      "principle": "Operable",
+      "enClause": "9.2.4.1",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LR",
+        "LC",
+        "WVC"
+      ]
+    },
+    "2.4.2": {
+      "title": "Page titled",
+      "level": "A",
+      "principle": "Operable",
+      "enClause": "9.2.4.2",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LMS",
+        "LC"
+      ]
+    },
+    "2.4.3": {
+      "title": "Focus order",
+      "level": "A",
+      "principle": "Operable",
+      "enClause": "9.2.4.3",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LMS",
+        "LC"
+      ]
+    },
+    "2.4.4": {
+      "title": "Link purpose (in context)",
+      "level": "A",
+      "principle": "Operable",
+      "enClause": "9.2.4.4",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LMS",
+        "LC",
+        "WVC"
+      ]
+    },
+    "2.4.5": {
+      "title": "Multiple ways",
+      "level": "AA",
+      "principle": "Operable",
+      "enClause": "9.2.4.5",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LMS",
+        "LC",
+        "WVC"
+      ]
+    },
+    "2.4.6": {
+      "title": "Headings and labels",
+      "level": "AA",
+      "principle": "Operable",
+      "enClause": "9.2.4.6",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LMS",
+        "LC",
+        "WH",
+        "WVC"
+      ]
+    },
+    "2.4.7": {
+      "title": "Focus visible",
+      "level": "AA",
+      "principle": "Operable",
+      "enClause": "9.2.4.7",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LMS",
+        "LC",
+        "WVC"
+      ]
+    },
+    "2.5.1": {
+      "title": "Pointer gestures",
+      "level": "A",
+      "principle": "Operable",
+      "enClause": "9.2.5.1",
+      "userNeeds": [
+        "LMS",
+        "LR",
+        "LC"
+      ]
+    },
+    "2.5.2": {
+      "title": "Pointer cancellation",
+      "level": "A",
+      "principle": "Operable",
+      "enClause": "9.2.5.2",
+      "userNeeds": [
+        "LV",
+        "LMS",
+        "LR",
+        "LC"
+      ]
+    },
+    "2.5.3": {
+      "title": "Label in name",
+      "level": "A",
+      "principle": "Operable",
+      "enClause": "9.2.5.3",
+      "userNeeds": [
+        "LMS",
+        "LR",
+        "LC"
+      ]
+    },
+    "2.5.4": {
+      "title": "Motion actuation",
+      "level": "A",
+      "principle": "Operable",
+      "enClause": "9.2.5.4",
+      "userNeeds": [
+        "LMS",
+        "LR",
+        "WV",
+        "LV",
+        "LC"
+      ]
+    },
+    "3.1.1": {
+      "title": "Language of page",
+      "level": "A",
+      "principle": "Understandable",
+      "enClause": "9.3.1.1",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "WH",
+        "LH",
+        "LC"
+      ]
+    },
+    "3.1.2": {
+      "title": "Language of parts",
+      "level": "AA",
+      "principle": "Understandable",
+      "enClause": "9.3.1.2",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "WH",
+        "LH",
+        "LC"
+      ]
+    },
+    "3.2.1": {
+      "title": "On focus",
+      "level": "A",
+      "principle": "Understandable",
+      "enClause": "9.3.2.1",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LMS",
+        "LC"
+      ]
+    },
+    "3.2.2": {
+      "title": "On input",
+      "level": "A",
+      "principle": "Understandable",
+      "enClause": "9.3.2.2",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LMS",
+        "LC"
+      ]
+    },
+    "3.2.3": {
+      "title": "Consistent navigation",
+      "level": "AA",
+      "principle": "Understandable",
+      "enClause": "9.3.2.3",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LC"
+      ]
+    },
+    "3.2.4": {
+      "title": "Consistent identification",
+      "level": "AA",
+      "principle": "Understandable",
+      "enClause": "9.3.2.4",
+      "userNeeds": [
+        "LV",
+        "LC",
+        "WV"
+      ]
+    },
+    "3.3.1": {
+      "title": "Error identification",
+      "level": "A",
+      "principle": "Understandable",
+      "enClause": "9.3.3.1",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "WPC",
+        "LC"
+      ]
+    },
+    "3.3.2": {
+      "title": "Labels or instructions",
+      "level": "A",
+      "principle": "Understandable",
+      "enClause": "9.3.3.2",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LC",
+        "WVC",
+        "LMS"
+      ]
+    },
+    "3.3.3": {
+      "title": "Error suggestion",
+      "level": "AA",
+      "principle": "Understandable",
+      "enClause": "9.3.3.3",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LC",
+        "WVC",
+        "LMS"
+      ]
+    },
+    "3.3.4": {
+      "title": "Error prevention (legal, financial, data)",
+      "level": "AA",
+      "principle": "Understandable",
+      "enClause": "9.3.3.4",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LC",
+        "LMS"
+      ]
+    },
+    "4.1.1": {
+      "title": "Parsing",
+      "level": "A",
+      "principle": "Robust",
+      "enClause": "9.4.1.1",
+      "userNeeds": [
+        "WV",
+        "LV"
+      ]
+    },
+    "4.1.2": {
+      "title": "Name, role, value",
+      "level": "A",
+      "principle": "Robust",
+      "enClause": "9.4.1.2",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "LMS"
+      ]
+    },
+    "4.1.3": {
+      "title": "Status messages",
+      "level": "AA",
+      "principle": "Robust",
+      "enClause": "9.4.1.3",
+      "userNeeds": [
+        "WV",
+        "LV",
+        "WPC",
+        "WH",
+        "LH",
+        "LMS",
+        "LR",
+        "PST",
+        "LC",
+        "WVC"
+      ]
+    }
+  }
+}
