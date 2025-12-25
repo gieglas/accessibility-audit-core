@@ -4,6 +4,8 @@ import axe from "axe-core";
 
 import { axeToRawFindings } from "./adapters/axeToRawFindings.mjs";
 import { normaliseFindings } from "../core/normalisation/normaliseFindings.mjs";
+import { saveAuditRun } from "../core/persistence/saveAuditRun.mjs";
+
 
 import fs from "node:fs";
 
@@ -18,6 +20,9 @@ const standard = JSON.parse(
 // Minimal execution context
 // ----
 const auditRunId = `run-${Date.now()}`;
+
+const startedAt = new Date().toISOString();
+
 
 const context = {
   auditRunId,
@@ -63,6 +68,57 @@ const rawFindings = axeToRawFindings(axeResults, {
 // Step 5: Normalise
 // ----
 const normalisedFindings = normaliseFindings(rawFindings, standard);
+
+const finishedAt = new Date().toISOString();
+const durationMs =
+  new Date(finishedAt).getTime() - new Date(startedAt).getTime();
+
+// ----
+// Step 6: Assemble audit-run data
+// ----
+const auditRunData = {
+  schemaVersion: "1.0",
+
+  auditRun: {
+    auditRunId,
+    startedAt,
+    finishedAt,
+    durationMs
+  },
+
+  environment: {
+    tool: "axe-core",
+    nodeVersion: process.version
+  },
+
+  standard: {
+    standardId: standard.standardId,
+    wcagVersion: standard.wcagVersion
+  },
+
+  scope: {
+    siteId: context.siteId,
+    pages: [
+      {
+        pageId: context.pageId,
+        url
+      }
+    ]
+  },
+
+  results: {
+    rawFindings,
+    normalisedFindings
+  }
+};
+
+// ----
+// Step 7: Persist audit run
+// ----
+const savedPath = await saveAuditRun(auditRunData);
+
+console.log(`✔ Audit run saved to ${savedPath}`);
+
 
 // ----
 // Output (temporary)
