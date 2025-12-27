@@ -36,7 +36,11 @@ const url = "https://www.gov.cy/?s=performance";
 // ----
 // Step 1: Launch browser and open page
 // ----
-const browser = await puppeteer.launch({ headless: "new" });
+const browser = await puppeteer.launch({ headless: "new" , 
+  args: [
+    '--no-sandbox',
+    '--disable-setuid-sandbox'
+  ]});
 const page = await browser.newPage();
 
 await page.goto(url, { waitUntil: "networkidle2" });
