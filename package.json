@@ -1,6 +1,10 @@
 {
   "license": "MIT",
   "author": "Constantinos Evangelou",
+  "scripts": {
+    "test" : "node --test",
+     "audit": "node cli/run-audit.mjs"
+  },
   "dependencies": {
     "axe-core": "^4.11.0",
     "pa11y": "^9.0.1",

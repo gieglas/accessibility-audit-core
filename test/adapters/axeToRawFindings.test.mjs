@@ -2,7 +2,7 @@ import test, { describe } from "node:test";
 import assert from "node:assert/strict";
 import crypto from "node:crypto";
 
-import { axeToRawFindings } from "../../cli/adapters/axeToRawFindings.mjs";
+import { axeToRawFindings } from "../../core/adapters/axeToRawFindings.mjs";
 
 describe("axeToRawFindings.mjs", () => {
   test("converts axe violations into RawFinding objects", () => {

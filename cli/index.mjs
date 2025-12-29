@@ -2,7 +2,7 @@ import { fileURLToPath } from "node:url";
 import puppeteer from "puppeteer";
 import axe from "axe-core";
 
-import { axeToRawFindings } from "./adapters/axeToRawFindings.mjs";
+import { axeToRawFindings } from "../core/adapters/axeToRawFindings.mjs";
 import { normaliseFindings } from "../core/normalisation/normaliseFindings.mjs";
 import { saveAuditRun } from "../core/persistence/saveAuditRun.mjs";
 
