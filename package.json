@@ -1,4 +1,6 @@
 {
+  "license": "MIT",
+  "author": "Constantinos Evangelou",
   "dependencies": {
     "axe-core": "^4.11.0",
     "pa11y": "^9.0.1",
