@@ -21,7 +21,19 @@ async function runAudit() {
     // ----
     // Step 0: Read CLI arguments
     // ----
-    const [configPath] = process.argv.slice(2);
+    const args = process.argv.slice(2);
+
+    const configPath = args.find(arg => !arg.startsWith("--"));
+    const isDebug = args.includes("--debug");
+
+    // debug dir
+    const debugDir = path.resolve("debug");
+
+    if (isDebug) {
+        console.log("⚠ Running in DEBUG mode");
+        await fs.mkdir(debugDir, { recursive: true });
+    }
+
 
     if (!configPath) {
         console.error("Usage: node cli/run-audit.mjs <audit-config.json>");
@@ -107,12 +119,23 @@ async function runAudit() {
                     // Give client-side rendering time to finish (Puppeteer-version safe)
                     await new Promise(resolve => setTimeout(resolve, 1500));
 
+                    // ---
                     //debug
-                    await page.screenshot({ path: `debug/debug-${siteId}-${pageId}.png`, fullPage: true });
+                    // ----
+                    if (isDebug) {
+                        // Screenshot of rendered page
+                        await page.screenshot({
+                            path: path.join(debugDir, `debug-${siteId}-${pageId}.png`),
+                            fullPage: true
+                        });
 
-                    const html = await page.content();
-                    await fs.writeFile(`debug/debug-${siteId}-${pageId}.html`, html);
-
+                        // Dump rendered HTML
+                        const html = await page.content();
+                        await fs.writeFile(
+                            path.join(debugDir, `debug-${siteId}-${pageId}.html`),
+                            html
+                        );
+                    }
 
                     // Inject axe-core
                     // await page.addScriptTag({ path: require.resolve("axe-core") });
