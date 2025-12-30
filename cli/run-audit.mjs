@@ -103,6 +103,17 @@ async function runAudit() {
                 try {
                     await page.goto(url, { waitUntil: "networkidle2" });
 
+
+                    // Give client-side rendering time to finish (Puppeteer-version safe)
+                    await new Promise(resolve => setTimeout(resolve, 1500));
+
+                    //debug
+                    await page.screenshot({ path: `debug/debug-${siteId}-${pageId}.png`, fullPage: true });
+
+                    const html = await page.content();
+                    await fs.writeFile(`debug/debug-${siteId}-${pageId}.html`, html);
+
+
                     // Inject axe-core
                     // await page.addScriptTag({ path: require.resolve("axe-core") });
                     const axePath = fileURLToPath(import.meta.resolve("axe-core"));

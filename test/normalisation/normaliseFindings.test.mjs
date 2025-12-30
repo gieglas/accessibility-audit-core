@@ -5,7 +5,7 @@ import { normaliseFindings } from "../../core/normalisation/normaliseFindings.mj
 import { mockStandard } from "../fixtures/standard.mjs";
 
 describe("normaliseFindings.mjs", () => {
-  test("groups WCAG findings by wcagCriterionId", () => {
+  test("groups WCAG findings by wcagCriterionId into compliance", () => {
     const rawFindings = [
       {
         rawFindingId: "r1",
@@ -33,9 +33,10 @@ describe("normaliseFindings.mjs", () => {
 
     const result = normaliseFindings(rawFindings, mockStandard);
 
-    assert.equal(result.length, 1);
+    assert.equal(result.compliance.length, 1);
+    assert.equal(result.other.length, 0);
 
-    assert.deepEqual(result[0], {
+    assert.deepEqual(result.compliance[0], {
       auditRunId: "run1",
       siteId: "site1",
       pageId: "home",
@@ -52,7 +53,7 @@ describe("normaliseFindings.mjs", () => {
     });
   });
 
-  test("creates separate findings for different WCAG criteria", () => {
+  test("creates separate compliance findings for different WCAG criteria", () => {
     const rawFindings = [
       {
         rawFindingId: "r1",
@@ -80,13 +81,17 @@ describe("normaliseFindings.mjs", () => {
 
     const result = normaliseFindings(rawFindings, mockStandard);
 
-    assert.equal(result.length, 2);
+    assert.equal(result.compliance.length, 2);
+    assert.equal(result.other.length, 0);
 
-    const wcagIds = result.map(r => r.wcagCriterionId).sort();
+    const wcagIds = result.compliance
+      .map(r => r.wcagCriterionId)
+      .sort();
+
     assert.deepEqual(wcagIds, ["1.1.1", "1.4.3"]);
   });
 
-  test("groups non-WCAG findings by ruleId", () => {
+  test("groups non-WCAG findings by ruleId into other", () => {
     const rawFindings = [
       {
         rawFindingId: "r1",
@@ -114,9 +119,10 @@ describe("normaliseFindings.mjs", () => {
 
     const result = normaliseFindings(rawFindings, mockStandard);
 
-    assert.equal(result.length, 1);
+    assert.equal(result.compliance.length, 0);
+    assert.equal(result.other.length, 1);
 
-    assert.deepEqual(result[0], {
+    assert.deepEqual(result.other[0], {
       auditRunId: "run1",
       siteId: "site1",
       pageId: "home",
@@ -161,12 +167,19 @@ describe("normaliseFindings.mjs", () => {
 
     const result = normaliseFindings(rawFindings, mockStandard);
 
-    assert.equal(result.length, 2);
+    assert.equal(result.compliance.length, 1);
+    assert.equal(result.other.length, 1);
 
-    const wcagFinding = result.find(r => r.wcagCriterionId !== null);
-    const nonWcagFinding = result.find(r => r.wcagCriterionId === null);
+    assert.equal(result.compliance[0].wcagCriterionId, "1.1.1");
+    assert.equal(result.other[0].ruleId, "region");
+  });
 
-    assert.equal(wcagFinding.wcagCriterionId, "1.1.1");
-    assert.equal(nonWcagFinding.ruleId, "region");
+  test("returns empty buckets when no findings exist", () => {
+    const result = normaliseFindings([], mockStandard);
+
+    assert.deepEqual(result, {
+      compliance: [],
+      other: []
+    });
   });
 });
