@@ -1,13 +1,34 @@
 {
+  "name": "accessibility-audit-core",
+  "version": "0.1.0",
+  "description": "Core logic for accessibility audits (WCAG / EN 301 549), reusable across CLI, browser, and extensions",
   "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./core/index.mjs"
+  },
+  "files": [
+    "core"
+  ],
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "wcag",
+    "en301549",
+    "axe-core",
+    "audit"
+  ],
   "author": "Constantinos Evangelou",
-  "scripts": {
-    "test" : "node --test",
-     "audit": "node cli/run-audit.mjs"
+  "engines": {
+    "node": ">=18"
   },
   "dependencies": {
     "axe-core": "^4.11.0",
     "pa11y": "^9.0.1",
     "puppeteer": "^24.33.0"
+  },
+  "scripts": {
+    "test" : "node --test",
+     "audit": "node cli/run-audit.mjs"
   }
 }

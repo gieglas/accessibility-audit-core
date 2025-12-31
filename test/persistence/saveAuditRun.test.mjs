@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import { saveAuditRun } from "../../core/persistence/saveAuditRun.mjs";
+import { saveAuditRun } from "../../cli/persistence/saveAuditRun.mjs";
 
 const TEST_DIR = path.join("test", "tmp");
 

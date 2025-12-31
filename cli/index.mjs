@@ -4,7 +4,7 @@ import axe from "axe-core";
 
 import { axeToRawFindings } from "../core/adapters/axeToRawFindings.mjs";
 import { normaliseFindings } from "../core/normalisation/normaliseFindings.mjs";
-import { saveAuditRun } from "../core/persistence/saveAuditRun.mjs";
+import { saveAuditRun } from "./persistence/saveAuditRun.mjs";
 
 
 import fs from "node:fs";
