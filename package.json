@@ -1,6 +1,6 @@
 {
   "name": "accessibility-audit-core",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Core logic for accessibility audits (WCAG / EN 301 549), reusable across CLI, browser, and extensions",
   "license": "MIT",
   "type": "module",
@@ -20,7 +20,7 @@
   ],
   "author": "Constantinos Evangelou",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "dependencies": {
     "axe-core": "^4.11.0",
