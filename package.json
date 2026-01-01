@@ -20,7 +20,7 @@
   ],
   "author": "Constantinos Evangelou",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "dependencies": {
     "axe-core": "^4.11.0",

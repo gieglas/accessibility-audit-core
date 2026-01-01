@@ -1,3 +1,5 @@
+import { randomUUID } from "node:crypto";
+
 /**
  * Convert axe-core results into RawFinding objects
  *
@@ -10,7 +12,7 @@ export function axeToRawFindings(axeResults, context) {
 
   return axeResults.violations.flatMap(violation =>
     violation.nodes.map(node => ({
-      rawFindingId: crypto.randomUUID(),
+      rawFindingId: randomUUID(),
 
       // Context
       auditRunId: context.auditRunId,
