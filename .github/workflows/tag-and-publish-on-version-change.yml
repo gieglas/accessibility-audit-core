@@ -111,9 +111,9 @@ jobs:
     #   - name: Publish package on NPM 📦
     #     run: npm publish --provenance --access=public
     #     # With the change to use Trusted Publisher the NPM TOKEN is no longer needed
-      - name: Zip /src folder
+      - name: Zip /core folder
         if: steps.version-check.outputs.changed == 'true'
-        run: zip -r src.zip src
+        run: zip -r core.zip core
       - name: Create Release
         if: steps.version-check.outputs.changed == 'true'
         id: create_release
@@ -132,6 +132,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./src.zip
-          asset_name: src.zip
+          asset_path: ./core.zip
+          asset_name: core.zip
           asset_content_type: application/zip
