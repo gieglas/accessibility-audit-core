@@ -1,4 +1,7 @@
 # accessibility-audit-core
+![License](https://img.shields.io/github/license/gieglas/accessibility-audit-core)
+[![Unit test](https://github.com/gieglas/accessibility-audit-core/actions/workflows/unit-test.yml/badge.svg)](https://github.com/gieglas/accessibility-audit-core/actions/workflows/unit-test.yml)
+[![tag-and-publish-on-version-change](https://github.com/gieglas/accessibility-audit-core/actions/workflows/tag-and-publish-on-version-change.yml/badge.svg)](https://github.com/gieglas/accessibility-audit-core/actions/workflows/tag-and-publish-on-version-change.yml)
 
 Core utilities for automated web accessibility auditing.
 
