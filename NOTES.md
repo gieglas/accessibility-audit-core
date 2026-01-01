@@ -31,23 +31,18 @@ This ensures that:
 ## Architecture
 
 ```text
-cli/
-  run-audit.mjs
 core/
   adapters/
   normalisation/
   persistence/
   standards/
-test/
 ```
 
-- CLI orchestrates
 - Core contains pure logic
 
-## Why Puppeteer + axe-core
+## Why axe-core
 
 - axe-core is industry standard
-- Puppeteer gives deterministic rendering + debug
 
 ## Normalisation
 
@@ -57,16 +52,6 @@ Findings are split into:
 - `other` → best-practice / non-WCAG
 
 This prevents overstating compliance.
-
-## Persistence
-
-Each audit run:
-
-- Is immutable
-- Is self-contained
-- Stored as JSON
-
-Aggregation is a later concern.
 
 ## Debug mode
 
@@ -84,5 +69,3 @@ Unit tests cover:
 - WCAG resolution
 - Normalisation
 - Adapters
-
-CLI runner is not unit tested by design.
