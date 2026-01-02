@@ -1,6 +1,6 @@
 {
   "name": "accessibility-audit-core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Core logic for accessibility audits (WCAG / EN 301 549), reusable across CLI, browser, and extensions",
   "license": "MIT",
   "type": "module",
