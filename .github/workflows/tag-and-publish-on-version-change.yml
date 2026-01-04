@@ -99,7 +99,7 @@ jobs:
     #       node-version: '20'
     #       registry-url: 'https://registry.npmjs.org'
     #       # 🔸ADDED - enables npm auth via OIDC trusted publisher
-    #       scope: '@gov-cy'
+    #       scope: '@consevangelou'
     #       always-auth: true
     #   - name: Test OIDC connection
     #     run: npm publish --provenance --access public --dry-run
