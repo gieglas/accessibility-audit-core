@@ -36,7 +36,7 @@ Those concerns intentionally live in **separate projects**.
 ## Installation
 
 ```bash
-npm install accessibility-audit-core
+npm install @consevangelou/accessibility-audit-core
 ```
 
 ## Basic usage
@@ -44,7 +44,7 @@ npm install accessibility-audit-core
 ### Convert axe-core results into raw findings
 
 ```js
-import { axeToRawFindings } from "accessibility-audit-core";
+import { axeToRawFindings } from "@consevangelou/accessibility-audit-core";
 
 const rawFindings = axeToRawFindings(axeResults, {
   auditRunId: "run-123",
@@ -154,7 +154,7 @@ Raw findings should **never aggregated or altered**.
 Standards are bundled with the package.
 
 ```js
-import { loadStandard } from "accessibility-audit-core";
+import { loadStandard } from "@consevangelou/accessibility-audit-core";
 
 const standard = await loadStandard("EN301549_v3.2.1");
 ```
@@ -228,7 +228,7 @@ Currently supported:
 ### Normalise findings
 
 ```js
-import { normaliseFindings } from "accessibility-audit-core";
+import { normaliseFindings } from "@consevangelou/accessibility-audit-core";
 
 const normalised = normaliseFindings(rawFindings, standard);
 ```

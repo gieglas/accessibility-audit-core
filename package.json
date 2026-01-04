@@ -1,6 +1,6 @@
 {
-  "name": "accessibility-audit-core",
-  "version": "1.0.3",
+  "name": "@consevangelou/accessibility-audit-core",
+  "version": "1.0.5",
   "description": "Core logic for accessibility audits (WCAG / EN 301 549), reusable across CLI, browser, and extensions",
   "license": "MIT",
   "type": "module",
@@ -18,6 +18,11 @@
     "axe-core",
     "audit"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gieglas/accessibility-audit-core.git"
+  },
+  "homepage": "https://github.com/gieglas/accessibility-audit-core",
   "author": "Constantinos Evangelou",
   "engines": {
     "node": ">=20"
