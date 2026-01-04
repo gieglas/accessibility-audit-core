@@ -1,7 +1,9 @@
 # accessibility-audit-core
+[![npm (scoped)](https://img.shields.io/npm/v/@consevangelou/accessibility-audit-core)](https://www.npmjs.com/package/@consevangelou/accessibility-audit-core)
 ![License](https://img.shields.io/github/license/gieglas/accessibility-audit-core)
 [![Unit test](https://github.com/gieglas/accessibility-audit-core/actions/workflows/unit-test.yml/badge.svg)](https://github.com/gieglas/accessibility-audit-core/actions/workflows/unit-test.yml)
 [![tag-and-publish-on-version-change](https://github.com/gieglas/accessibility-audit-core/actions/workflows/tag-and-publish-on-version-change.yml/badge.svg)](https://github.com/gieglas/accessibility-audit-core/actions/workflows/tag-and-publish-on-version-change.yml)
+[![coverage](coverage-badges.svg)](coverage-summary.json)
 
 Core utilities for automated web accessibility auditing.
 

@@ -1,6 +1,6 @@
 {
   "name": "@consevangelou/accessibility-audit-core",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Core logic for accessibility audits (WCAG / EN 301 549), reusable across CLI, browser, and extensions",
   "license": "MIT",
   "type": "module",
@@ -33,7 +33,15 @@
     "puppeteer": "^24.33.0"
   },
   "scripts": {
-    "test" : "node --test",
-     "audit": "node cli/run-audit.mjs"
+    "test": "node --test",
+    "audit": "node cli/run-audit.mjs",
+    "coverage": "c8 --reporter=html --reporter=text --reporter=lcov --reporter=json-summary npm test",
+    "coverage:copy": "node -e \"try{require('fs').copyFileSync('coverage/coverage-summary.json','./coverage-summary.json')}catch(e){process.exit(0)}\"",
+    "coverage:report": "c8 report",
+    "coverage:badge": "coverage-badges --output ./coverage-badges.svg && npm run coverage:copy"
+  },
+  "devDependencies": {
+    "c8": "^10.1.3",
+    "coverage-badges-cli": "^2.2.0"
   }
 }
