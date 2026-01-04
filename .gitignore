@@ -3,3 +3,4 @@ audits/
 logs/
 debug/
 .ssh/
+coverage/
