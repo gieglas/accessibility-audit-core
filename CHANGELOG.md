@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated vulnerable **production/runtime dependencies** (`dependencies`).
 - **Impact:** npm package consumers **are affected**.
 
+### Changed
+- Updated `tag-and-publish-on-version-change` workflow
+
 ### Added
 - `en301549_v3.2.1.json` in `standards/`
 
